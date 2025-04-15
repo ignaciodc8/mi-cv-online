@@ -1,0 +1,40 @@
+<section class="projects-section">
+    <div class="container">
+      <h1 class="section-title">Mis Proyectos</h1>
+      
+      <div *ngIf="projects.length === 0" class="no-projects">
+        <p>Actualmente estoy trabajando en nuevos proyectos. ¡Vuelve pronto para ver mis creaciones!</p>
+      </div>
+      
+      <div class="projects-grid" *ngIf="projects.length > 0">
+        <div class="project-card" *ngFor="let project of projects">
+          <div class="project-image">
+            <img [src]="project.image || 'assets/images/project-placeholder.jpg'" alt="{{ project.title }}">
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">{{ project.title }}</h3>
+            <p class="project-description">{{ project.description }}</p>
+            
+            <div class="project-tech">
+              <span class="tech-tag" *ngFor="let tech of project.technologies">{{ tech }}</span>
+            </div>
+            
+            <div class="project-links">
+              <a *ngIf="project.github" [href]="project.github" target="_blank" class="project-link github">
+                <i class="fab fa-github"></i> Código
+              </a>
+              <a *ngIf="project.link" [href]="project.link" target="_blank" class="project-link demo">
+                <i class="fas fa-external-link-alt"></i> Demo
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="coming-soon">
+        <h2>Próximamente</h2>
+        <p>Estoy trabajando en nuevos proyectos que pronto estarán disponibles aquí.</p>
+        <p>Mientras tanto, puedes revisar mi perfil de GitHub para ver mis contribuciones y repositorios.</p>
+      </div>
+    </div>
+  </section>

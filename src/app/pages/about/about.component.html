@@ -1,0 +1,47 @@
+<section class="about-section">
+    <div class="container">
+      <h1 class="section-title">Sobre Mí</h1>
+      
+      <div class="about-content">
+        <div class="about-image">
+          <img [src]="personalInfo.photo" alt="{{ personalInfo.name }}">
+        </div>
+        
+        <div class="about-text">
+          <h2>{{ personalInfo.name }}</h2>
+          <h3>{{ personalInfo.title }}</h3>
+          
+          <div class="about-description">
+            <p>{{ personalInfo.about }}</p>
+          </div>
+          
+          <div class="about-details">
+            <div class="detail-item">
+              <span class="detail-label">Ubicación:</span>
+              <span class="detail-value">{{ personalInfo.contact.location }}</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">Email:</span>
+              <span class="detail-value">{{ personalInfo.contact.email }}</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">Teléfono:</span>
+              <span class="detail-value">{{ personalInfo.contact.phone }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="interests-section">
+        <h2 class="subsection-title">Intereses</h2>
+        <div class="interests-container">
+          <div class="interest-item" *ngFor="let interest of interests">
+            <div class="interest-icon">
+              <i class="fas fa-star"></i>
+            </div>
+            <div class="interest-name">{{ interest }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

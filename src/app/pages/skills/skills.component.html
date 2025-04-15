@@ -1,0 +1,37 @@
+<section class="skills-section">
+    <div class="container">
+      <h1 class="section-title">Mis Habilidades</h1>
+      
+      <div class="category-filter">
+        <button 
+          *ngFor="let category of categories" 
+          [ngClass]="{'active': activeCategory === category}"
+          (click)="setActiveCategory(category)">
+          {{ category }}
+        </button>
+      </div>
+      
+      <div class="skills-container">
+        <div class="skill-card" *ngFor="let skill of getFilteredSkills()">
+          <div class="skill-icon">
+            <i class="fas" [ngClass]="getSkillIcon(skill.name)"></i>
+          </div>
+          <h3>{{ skill.name }}</h3>
+          <div class="skill-level">
+            <div class="skill-progress" [style.width.%]="skill.level"></div>
+          </div>
+          <p class="skill-percentage">{{ skill.level }}%</p>
+          <p class="skill-description" *ngIf="skill.description">{{ skill.description }}</p>
+        </div>
+      </div>
+      
+      <h2 class="subsection-title">Habilidades Blandas</h2>
+      
+      <div class="soft-skills-container">
+        <div class="soft-skill-card" *ngFor="let skill of softSkills">
+          <h3>{{ skill.name }}</h3>
+          <p>{{ skill.description }}</p>
+        </div>
+      </div>
+    </div>
+  </section>

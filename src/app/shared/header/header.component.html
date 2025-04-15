@@ -1,0 +1,30 @@
+<header class="header">
+  <div class="logo">
+    <a routerLink="/">{{ personalInfo.name }}</a>
+  </div>
+  <nav class="nav-desktop">
+    <ul>
+      <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Inicio</a></li>
+      <li><a routerLink="/about" routerLinkActive="active">Sobre mí</a></li>
+      <li><a routerLink="/skills" routerLinkActive="active">Habilidades</a></li>
+      <li><a routerLink="/education" routerLinkActive="active">Educación</a></li>
+      <li><a routerLink="/projects" routerLinkActive="active">Proyectos</a></li>
+      <li><a routerLink="/contact" routerLinkActive="active">Contacto</a></li>
+    </ul>
+  </nav>
+  <button class="menu-toggle" (click)="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  <nav class="nav-mobile" [ngClass]="{'open': menuOpen}">
+    <ul>
+      <li><a routerLink="/" (click)="closeMenu()">Inicio</a></li>
+      <li><a routerLink="/about" (click)="closeMenu()">Sobre mí</a></li>
+      <li><a routerLink="/skills" (click)="closeMenu()">Habilidades</a></li>
+      <li><a routerLink="/education" (click)="closeMenu()">Educación</a></li>
+      <li><a routerLink="/projects" (click)="closeMenu()">Proyectos</a></li>
+      <li><a routerLink="/contact" (click)="closeMenu()">Contacto</a></li>
+    </ul>
+  </nav>
+</header>

@@ -15,9 +15,19 @@ export class CvDataService {
     return CV_DATA.skills;
   }
 
+  getSoftSkills() {
+    return CV_DATA.softSkills;
+  }
+
   getEducation() {
     return CV_DATA.education;
   }
 
-  // Añade más métodos según necesites
+  getProjects() {
+    return CV_DATA.projects;
+  }
+
+  getInterests() {
+    return CV_DATA.interests;
+  }
 }

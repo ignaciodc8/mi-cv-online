@@ -1,0 +1,110 @@
+<section class="contact-section">
+    <div class="container">
+      <h1 class="section-title">Contacto</h1>
+      
+      <div class="contact-container">
+        <div class="contact-info">
+          <h2>Información de Contacto</h2>
+          <p>Si estás interesado en trabajar conmigo o tienes alguna pregunta, no dudes en contactarme.</p>
+          
+          <div class="info-item">
+            <div class="info-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div class="info-content">
+              <h3>Ubicación</h3>
+              <p>{{ personalInfo.contact.location }}</p>
+            </div>
+          </div>
+          
+          <div class="info-item">
+            <div class="info-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="info-content">
+              <h3>Email</h3>
+              <p><a href="mailto:{{ personalInfo.contact.email }}">{{ personalInfo.contact.email }}</a></p>
+            </div>
+          </div>
+          
+          <div class="info-item">
+            <div class="info-icon">
+              <i class="fas fa-phone"></i>
+            </div>
+            <div class="info-content">
+              <h3>Teléfono</h3>
+              <p><a href="tel:{{ personalInfo.contact.phone }}">{{ personalInfo.contact.phone }}</a></p>
+            </div>
+          </div>
+          
+          <div class="social-links">
+            <a *ngIf="personalInfo.contact.github" href="{{ personalInfo.contact.github }}" target="_blank" class="social-link">
+              <i class="fab fa-github"></i>
+            </a>
+            <a *ngIf="personalInfo.contact.linkedin" href="{{ personalInfo.contact.linkedin }}" target="_blank" class="social-link">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+          </div>
+        </div>
+        
+        <div class="contact-form">
+          <h2>Envíame un Mensaje</h2>
+          
+          <div *ngIf="formSubmitted" class="form-success">
+            <i class="fas fa-check-circle"></i>
+            <p>¡Gracias por tu mensaje! Te responderé lo antes posible.</p>
+          </div>
+          
+          <form *ngIf="!formSubmitted" (ngSubmit)="submitForm()">
+            <div class="form-group">
+              <label for="name">Nombre</label>
+              <input 
+                type="text" 
+                id="name" 
+                name="name" 
+                [(ngModel)]="formData.name" 
+                required
+                [class.error]="formError && !formData.name">
+            </div>
+            
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input 
+                type="email" 
+                id="email" 
+                name="email" 
+                [(ngModel)]="formData.email" 
+                required
+                [class.error]="formError && !formData.email">
+            </div>
+            
+            <div class="form-group">
+              <label for="subject">Asunto</label>
+              <input 
+                type="text" 
+                id="subject" 
+                name="subject" 
+                [(ngModel)]="formData.subject">
+            </div>
+            
+            <div class="form-group">
+              <label for="message">Mensaje</label>
+              <textarea 
+                id="message" 
+                name="message" 
+                rows="5" 
+                [(ngModel)]="formData.message" 
+                required
+                [class.error]="formError && !formData.message"></textarea>
+            </div>
+            
+            <div *ngIf="formError" class="form-error">
+              <p>Por favor, completa todos los campos requeridos.</p>
+            </div>
+            
+            <button type="submit" class="submit-btn">Enviar Mensaje</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>

@@ -1,0 +1,24 @@
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-info">
+      <p>&copy; {{ currentYear }} {{ personalInfo.name }}</p>
+      <p>{{ personalInfo.contact.location }}</p>
+    </div>
+    <div class="footer-contact">
+      <a href="mailto:{{ personalInfo.contact.email }}" class="footer-link">
+        <i class="fa fa-envelope"></i> {{ personalInfo.contact.email }}
+      </a>
+      <a href="tel:{{ personalInfo.contact.phone }}" class="footer-link">
+        <i class="fa fa-phone"></i> {{ personalInfo.contact.phone }}
+      </a>
+    </div>
+    <div class="footer-social">
+      <a *ngIf="personalInfo.contact.github" href="{{ personalInfo.contact.github }}" target="_blank" class="social-icon">
+        <i class="fab fa-github"></i>
+      </a>
+      <a *ngIf="personalInfo.contact.linkedin" href="{{ personalInfo.contact.linkedin }}" target="_blank" class="social-icon">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </div>
+  </div>
+</footer>
