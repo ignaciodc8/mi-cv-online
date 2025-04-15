@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { NgClass } from '@angular/common';
 import { CvDataService } from '../../services/cv-data.service';
+import { ThemeService } from '../../services/theme.service';
 
 @Component({
   selector: 'app-header',
@@ -14,7 +15,7 @@ export class HeaderComponent implements OnInit {
   personalInfo: any;
   menuOpen = false;
 
-  constructor(private cvDataService: CvDataService) { }
+  constructor(private cvDataService: CvDataService,  public themeService: ThemeService ) { }
 
   ngOnInit(): void {
     this.personalInfo = this.cvDataService.getPersonalInfo();
@@ -26,5 +27,8 @@ export class HeaderComponent implements OnInit {
 
   closeMenu(): void {
     this.menuOpen = false;
+  }
+  toggleTheme(): void {
+    this.themeService.toggleTheme();
   }
 }

@@ -74,3 +74,71 @@
   .text-center {
     text-align: center;
   }
+  /* Variables de tema claro (por defecto) */
+:root {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8f9fa;
+  --text-primary: #333333;
+  --text-secondary: #6c757d;
+  --accent-color: #007bff;
+  --border-color: #e9ecef;
+  --card-bg: #ffffff;
+  --card-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* Variables de tema oscuro */
+.dark-theme {
+  --bg-primary: #121212;
+  --bg-secondary: #1e1e1e;
+  --text-primary: #e0e0e0;
+  --text-secondary: #b0b0b0;
+  --accent-color: #4da3ff;
+  --border-color: #2c2c2c;
+  --card-bg: #1e1e1e;
+  --card-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Aplicar variables a elementos */
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+.header, .footer {
+  background-color: var(--bg-primary);
+  border-color: var(--border-color);
+}
+
+.hero, .about-section, .education-section, .contact-section {
+  background-color: var(--bg-secondary);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-primary);
+}
+
+p {
+  color: var(--text-secondary);
+}
+
+.skill-card, .project-card, .contact-form, .contact-info {
+  background-color: var(--card-bg);
+  box-shadow: var(--card-shadow);
+}
+
+/* Estilos para el botón de tema */
+.theme-toggle {
+  background: transparent;
+  border: none;
+  color: var(--text-primary);
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+  margin-left: 15px;
+  transition: background-color 0.3s;
+}
+
+.theme-toggle:hover {
+  background-color: var(--bg-secondary);
+}

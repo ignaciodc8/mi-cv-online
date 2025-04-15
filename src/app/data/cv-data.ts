@@ -2,14 +2,14 @@ export const CV_DATA = {
   personal: {
     name: "Ignacio Díaz Cabrera",
     title: "Desarrollador de Software",
-    photo: "assets/images/profile.jpg", // Necesitarás añadir tu foto al proyecto
-    about: "Estudiante en tercer y último año de la Tecnicatura Superior en Desarrollo de Software en el Instituto IDRA donde sigo desarrollando mis habilidades en programación y trabajo en equipo; donde además adquirí un nivel C1 de inglés. Busco especializarme en el desarrollo backend y para ello estoy realizando un curso en la plataforma Udemy.",
+    photo: "https://media.licdn.com/dms/image/v2/D4D03AQGShbo-mZoCKA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1711154351520?e=1750291200&v=beta&t=O_oE1HdFmL3u-yEOjfi0YE6gF5bzAZ09HUNNUSAgKhQ", // Necesitarás añadir tu foto al proyecto
+    about: "Desarrollador de software en formación con sólidos conocimientos en Java, C# y SQL. Actualmente finalizando la Tecnicatura Superior en Desarrollo de Software en el Instituto IDRA, donde he adquirido experiencia en programación orientada a objetos, desarrollo web y bases de datos. Cuento con nivel C1 de inglés, lo que me permite comunicarme eficazmente en entornos internacionales. Me especializo en desarrollo backend y estoy ampliando mis conocimientos en tecnologías frontend como Angular. Busco oportunidades para aplicar mis habilidades técnicas y analíticas en proyectos desafiantes que me permitan crecer profesionalmente.",
     contact: {
       email: "diazcabrera.ig@gmail.com",
       phone: "(+54) 223 668 2649",
       location: "Mar del Plata, Argentina",
-      linkedin: "", // Puedes añadir tu perfil de LinkedIn si lo tienes
-      github: ""    // Puedes añadir tu perfil de GitHub si lo tienes
+      linkedin: "https://www.linkedin.com/in/ignaciodiazcabrera/", // Puedes añadir tu perfil de LinkedIn si lo tienes
+      github: "https://www.github.com/ignaciodc8"    // Puedes añadir tu perfil de GitHub si lo tienes
     }
   },
   skills: [

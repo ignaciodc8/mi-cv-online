@@ -2,6 +2,9 @@
   <div class="logo">
     <a routerLink="/">{{ personalInfo.name }}</a>
   </div>
+  <button class="theme-toggle" (click)="toggleTheme()">
+    <i class="fas" [ngClass]="themeService.isDarkMode() ? 'fa-sun' : 'fa-moon'"></i>
+  </button>
   <nav class="nav-desktop">
     <ul>
       <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Inicio</a></li>
@@ -12,6 +15,7 @@
       <li><a routerLink="/contact" routerLinkActive="active">Contacto</a></li>
     </ul>
   </nav>
+  
   <button class="menu-toggle" (click)="toggleMenu()">
     <span></span>
     <span></span>
