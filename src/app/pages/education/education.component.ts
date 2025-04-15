@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { NgFor } from '@angular/common';
+import { NgFor, NgClass } from '@angular/common';
 import { CvDataService } from '../../services/cv-data.service';
 
 @Component({
   selector: 'app-education',
   standalone: true,
-  imports: [NgFor],
+  imports: [NgFor, NgClass],
   templateUrl: './education.component.html',
   styleUrls: ['./education.component.css']
 })
